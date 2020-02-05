@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>testApp</title>
+        </head>
+        <body>
+            {{string}}       
+            很多東西:
+            {% for i in TutorialList %}
+            {{i}}
+            {% endfor %}
+            站點:{{info_dict.site}} 內容:{{info_dict.content}}
+
+            {% for n in numbers %}
+                {{n}}
+                {% if not forloop.last %},{% endif %}
+            {% endfor %}
+
+            <a href="{{request.path}}?{{ request.GET.urlencode }}&delete=1">當前網址參數 </a>
+        </body>
+</html>

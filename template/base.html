@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>{% block title%}默認標題{% end block &} - ssl
+        </title>
+    </head>
+    <body>
+        {% include 'nav.html' %}
+
+        {% block content %}
+        <div>此處為預設內容，所有繼承自這個模板的，若不覆蓋就顯示此預設內容
+        </div>
+        {% endblock %}
+
+        {% include 'bottom.html' %}
+
+        {% include 'visitor.html' %}
+
+    </body>
+</html>
